@@ -6,9 +6,9 @@ import (
 
 const tool = "/opt/MegaRAID/storcli/storcli64"
 
-type RaidPlugin struct{}
+type PluginService struct{}
 
-func (r RaidPlugin) Hello() (string, error) {
+func (p PluginService) Hello() (string, error) {
     // /opt/MegaRAID/storcli/storcli64 show
     cmd := exec.Command(tool, "show")
     out, err := cmd.CombinedOutput()
