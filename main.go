@@ -8,7 +8,7 @@ const tool = "/opt/MegaRAID/storcli/storcli64"
 
 type PluginService struct{}
 
-func (p PluginService) Hello() (string, error) {
+func (p PluginService) Hello(name string) (string, error) {
     // /opt/MegaRAID/storcli/storcli64 show
     cmd := exec.Command(tool, "show")
     out, err := cmd.CombinedOutput()
