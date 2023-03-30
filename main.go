@@ -13,7 +13,7 @@ func (r raid) Hello() (string, error) {
     cmd := exec.Command(tool, "show")
     out, err := cmd.CombinedOutput()
     if err != nil {
-        return nil, err
+        return "", err
     }
     return string(out), nil
 }
